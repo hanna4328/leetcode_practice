@@ -1,7 +1,8 @@
 class Solution:
-    def findNumbers(self, nums: List[int]) -> int:
-        count=0
-        for num in nums:
-            if len(str(num))%2==0:
-                count+=1
-        return count
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k=0
+        for i,num in enumerate(nums):
+            if num!=val:
+                nums[k]=nums[i]
+                k+=1
+        return k
